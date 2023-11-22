@@ -13,6 +13,7 @@
 		2CA720CC2B0CF34300B3AB72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA720CB2B0CF34300B3AB72 /* ContentView.swift */; };
 		2CA720CE2B0CF34400B3AB72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA720CD2B0CF34400B3AB72 /* Assets.xcassets */; };
 		2CA720D12B0CF34400B3AB72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA720D02B0CF34400B3AB72 /* Preview Assets.xcassets */; };
+		2CE0D4FF2B0E4A0900CF51C7 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0D4FE2B0E4A0900CF51C7 /* CustomButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2CA720CB2B0CF34300B3AB72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2CA720CD2B0CF34400B3AB72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CA720D02B0CF34400B3AB72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2CE0D4FE2B0E4A0900CF51C7 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			children = (
 				2C4F1E342B0CF8A300C9E629 /* CardView.swift */,
 				2C4F1E372B0CF93500C9E629 /* ComtomBackgroundView.swift */,
+				2CE0D4FE2B0E4A0900CF51C7 /* CustomButtonView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CE0D4FF2B0E4A0900CF51C7 /* CustomButtonView.swift in Sources */,
 				2CA720CC2B0CF34300B3AB72 /* ContentView.swift in Sources */,
 				2C4F1E352B0CF8A300C9E629 /* CardView.swift in Sources */,
 				2CA720CA2B0CF34300B3AB72 /* HikeAppApp.swift in Sources */,
