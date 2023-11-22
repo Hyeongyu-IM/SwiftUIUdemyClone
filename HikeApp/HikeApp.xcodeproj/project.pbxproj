@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C4F1E352B0CF8A300C9E629 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4F1E342B0CF8A300C9E629 /* CardView.swift */; };
+		2C4F1E382B0CF93500C9E629 /* ComtomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4F1E372B0CF93500C9E629 /* ComtomBackgroundView.swift */; };
 		2CA720CA2B0CF34300B3AB72 /* HikeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA720C92B0CF34300B3AB72 /* HikeAppApp.swift */; };
 		2CA720CC2B0CF34300B3AB72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA720CB2B0CF34300B3AB72 /* ContentView.swift */; };
 		2CA720CE2B0CF34400B3AB72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA720CD2B0CF34400B3AB72 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C4F1E342B0CF8A300C9E629 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		2C4F1E372B0CF93500C9E629 /* ComtomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComtomBackgroundView.swift; sourceTree = "<group>"; };
 		2CA720C62B0CF34300B3AB72 /* HikeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HikeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA720C92B0CF34300B3AB72 /* HikeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeAppApp.swift; sourceTree = "<group>"; };
 		2CA720CB2B0CF34300B3AB72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +36,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C4F1E362B0CF91F00C9E629 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				2C4F1E342B0CF8A300C9E629 /* CardView.swift */,
+				2C4F1E372B0CF93500C9E629 /* ComtomBackgroundView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		2CA720BD2B0CF34300B3AB72 = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +68,7 @@
 				2CA720CB2B0CF34300B3AB72 /* ContentView.swift */,
 				2CA720CD2B0CF34400B3AB72 /* Assets.xcassets */,
 				2CA720CF2B0CF34400B3AB72 /* Preview Content */,
+				2C4F1E362B0CF91F00C9E629 /* Component */,
 			);
 			path = HikeApp;
 			sourceTree = "<group>";
@@ -138,7 +152,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA720CC2B0CF34300B3AB72 /* ContentView.swift in Sources */,
+				2C4F1E352B0CF8A300C9E629 /* CardView.swift in Sources */,
 				2CA720CA2B0CF34300B3AB72 /* HikeAppApp.swift in Sources */,
+				2C4F1E382B0CF93500C9E629 /* ComtomBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
