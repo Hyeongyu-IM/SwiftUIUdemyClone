@@ -58,12 +58,8 @@ struct CardView: View {
                 
                 //MARK: -- Main Content
                 ZStack {
-                    Circle()
-                        .fill(
-                            LinearGradient(colors: [.colorIndigoMedium, .colorSalmonLight],
-                                           startPoint: .topLeading, endPoint: .bottomTrailing)
-                        )
-                        .frame(width: 256, height: 256, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    CustomCircleView()
+                    
                     Image("image-\(imageNumber)")
                         .resizable()
                     .scaledToFit()
