@@ -4,4 +4,7 @@
    <FileRef
       location = "group:HikeApp/HikeApp.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:HikeApp/../Share/Share.xcodeproj">
+   </FileRef>
 </Workspace>
