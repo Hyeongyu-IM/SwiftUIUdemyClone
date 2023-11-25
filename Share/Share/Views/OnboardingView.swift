@@ -8,16 +8,102 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    
+    @AppStorage("onboarding") var isOnboardingViewActive: Bool = false
+    
     var body: some View {
-        Text("Onboarding")
-            .font(.largeTitle)
-        
-        Button(action: {
+        ZStack(content: {
+            Color(.colorBlue)
+                .ignoresSafeArea()
             
-        }, label: {
-            Text("Start")
+            VStack(spacing: 20) {
+                //MARK: -- Header
+                Spacer()
+                VStack(content: {
+                    Text("Share.")
+                        .font(.system(size: 60))
+                        .fontWeight(.heavy)
+                        .foregroundStyle(.white)
+                    
+                    Text("""
+It's not how much we give but how much love we put into giving.
+""")
+                    .font(.title3)
+                    .fontWeight(.light)
+                    .foregroundStyle(.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 10)
+                }) //: Header
+                //MARK: -- Center
+                
+                ZStack(content: {
+                    ZStack(content: {
+                        Circle()
+                            .stroke(.white.opacity(0.2), lineWidth: 40)
+                            .frame(width: 260, height: 260, alignment: .center)
+                        Circle()
+                            .stroke(.white.opacity(0.2), lineWidth: 80)
+                            .frame(width: 260, height: 260, alignment: .center)
+                    }) // ZStack
+                    
+                    Image(.character1)
+                        .resizable()
+                        .scaledToFit()
+                }) //: Center
+                
+                Spacer()
+                
+                //MARK: -- Footer
+                
+                ZStack(content: {
+                    
+                    Capsule()
+                        .fill(.white.opacity(0.2))
+                    Capsule()
+                        .fill(.white.opacity(0.2))
+                        .padding(8)
+                    
+                    Text("Get Started")
+                        .font(.system(.title, design: .rounded))
+                        .fontWeight(.bold)
+                        .foregroundStyle(.white)
+                        .offset(x: 20)
+                    
+                    HStack(content: {
+                        Capsule()
+                            .fill(.colorRed)
+                            .frame(width: 80)
+                        
+                        Spacer()
+                    })
+                    
+                    HStack {
+                        ZStack(content: {
+                            Circle()
+                                .fill(Color.colorRed)
+                            Circle()
+                                .fill(Color.black.opacity(0.15))
+                                .padding(8)
+                            Image(systemName: "chevron.right.2")
+                                .font(.system(size: 24, weight: .bold))
+                            Spacer()
+                        })
+                        .foregroundStyle(.white)
+                        .frame(width: 80, height: 80, alignment: .center)
+                        .onTapGesture {
+                            isOnboardingViewActive = false
+                        }
+                        
+                        Spacer()
+                    }//: HStack
+                    
+                }) //: ZStack
+                .frame(height: 80, alignment: .center)
+                .padding()
+            } //: VStack
+            
         })
-    } //: VStack
+    }
 }
 
 #Preview {
