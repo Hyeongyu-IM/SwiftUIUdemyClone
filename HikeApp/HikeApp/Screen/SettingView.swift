@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct SettingView: View {
+    //MARK: -- Properties
+    
+    private let alternateAppIcons: [String] = [
+        "AppIcon-MagnifyingGlass",
+        "AppIcon-Map",
+        "AppIcon-Mushroom",
+        "AppIcon-Camera",
+        "AppIcon-Backpack",
+        "AppIcon-Campfire"
+    ]
+    
     var body: some View {
         List {
             Section {
@@ -49,6 +60,37 @@ struct SettingView: View {
                 .frame(maxWidth: .infinity)
             }
             .listRowSeparator(.hidden)
+            
+            Section {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(alternateAppIcons.indices, id: \.self) { item in
+                            Button {
+                                print("Icon \(alternateAppIcons[item]) was pressed")
+                                
+                                UIApplication.shared.setAlternateIconName(alternateAppIcons[item]) { error in
+                                    print("status \(error?.localizedDescription)")
+                                }
+                            } label: {
+                                Image("\(alternateAppIcons[item])-Preview")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                            }
+                            .buttonStyle(.borderless)
+                        }
+                    }
+                }
+                Text("Choose your favourite app icon from the collection above.")
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.secondary)
+                    .font(.footnote)
+            } header: {
+                Text("Alternate Icons")
+            }
+
             
             Section(header: Text("ABOUT THE APP"),
                     footer:
