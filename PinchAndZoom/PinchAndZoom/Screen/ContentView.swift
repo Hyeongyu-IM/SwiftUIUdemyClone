@@ -22,6 +22,8 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
+                Color.clear
+                
                 Image(.thumbMagazineFrontCover)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -55,7 +57,7 @@ struct ContentView: View {
                                 }
                             })
                     )
-            }
+            } //: ZStack
             .navigationTitle("Pinch & Zoom")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear(perform: {
@@ -63,7 +65,12 @@ struct ContentView: View {
                     isAnimating = true
                 }
             })
-        }
+            .overlay(alignment: .top) {
+                infoPanelView(scale: imageScale, offset: imageOffset)
+                    .padding(.horizontal)
+                    .padding(.top, 30)
+            }
+        }//: Navigation
     }
 }
 
